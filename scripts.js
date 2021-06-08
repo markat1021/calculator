@@ -23,7 +23,6 @@ window.addEventListener('keyup', function(event) {
   if (event.key === "*") {advance("x")};
   if (event.key === "/") {advance("÷")};
   if (event.key === "Delete") {allClear()};
-  if (event.key === "Backspace") {removeLastChar()}; //TODO
 });
 
 let expression = document.querySelector("#expression p");
@@ -98,7 +97,7 @@ function addInput(str) {
   if (expression.textContent.split("")[0] == " ") {
     input.textContent = input.textContent +=str;
   // implies prior expression was already evaluated
-  } else if (expression.textContent.split(" ") > 2) { 
+  } else if (expression.textContent.split(" ").length > 2) { 
     allClear()
     input.textContent = input.textContent +=str;
   } else {
@@ -143,6 +142,3 @@ function evaluate() {
   }
 }
 
-function removeLastChar() {
-
-}
