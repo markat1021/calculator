@@ -1,0 +1,170 @@
+:root {
+  --equalColor: coral;
+  --modColor: rgb(124, 124, 124);
+  --numColor: rgb(211, 211, 211);
+  --inputColor: rgb(46, 46, 46);
+
+}
+body {
+  background-color: cadetblue;
+ 
+}
+
+main {
+  margin-top:4vmin;
+  width: 70vmin;
+  height: 90vmin;
+  background-color: white;
+  padding:1vmin;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#calculator {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  grid-gap: 0.5vmin 0.5vmin;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: 2fr 3fr 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "expression expression expression expression expression"
+    "input input input input input"
+    "seven eight nine C AC"
+    "four five six divide multiply"
+    "one two three add subtract"
+    "negate zero period equal equal";
+  background-color: white;
+}
+
+
+#expression {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: right;
+  grid-area: expression;
+  background-color:var(--inputColor);
+  color:var(--numColor);
+}
+#expression p {
+  text-align: right;
+  margin-right: 2vmin;
+}
+
+
+#input {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: right;
+  height:100%;
+  font-size:2em;
+  grid-area: input;
+  background-color:var(--inputColor);
+  color:var(--numColor);
+}
+#input p {
+  text-align: right;
+  margin:0;
+  margin-right:2vmin;
+  padding:0;
+  
+}
+
+#seven {
+  grid-area: seven;
+  background-color:var(--numColor);
+}
+#eight {
+  grid-area: eight;
+  background-color:var(--numColor);
+}
+#nine {
+  grid-area: nine;
+  background-color:var(--numColor);
+}
+#C {
+  grid-area: C;
+  background-color:var(--modColor);
+}
+#AC {
+  grid-area: AC;
+  background-color:var(--modColor);
+}
+#four {
+  grid-area: four;
+  background-color:var(--numColor);
+}
+#five {
+  grid-area: five;
+  background-color:var(--numColor);  
+}
+#six {
+  grid-area: six;
+  background-color:var(--numColor);
+}
+#divide {
+  grid-area: divide;
+  background-color:var(--modColor);
+}
+#multiply {
+  grid-area: multiply;
+  background-color:var(--modColor);
+}
+#one {
+  grid-area: one;
+  background-color:var(--numColor);
+}
+#two {
+  grid-area: two;
+  background-color:var(--numColor);
+}
+#three {
+  grid-area: three;
+  background-color:var(--numColor);
+}
+#add {
+  grid-area: add;
+  background-color:var(--modColor);
+}
+#subtract {
+  grid-area: subtract;
+  background-color:var(--modColor);
+}
+#negate {
+  grid-area: negate;
+  background-color:var(--modColor);
+}
+#zero {
+  grid-area: zero;
+  background-color:var(--numColor);
+}
+#period {
+  grid-area: period;
+  background-color:var(--modColor);
+}
+#equal {
+  grid-area: equal;
+  background-color:var(--equalColor);
+}
+
+
+@media screen and (max-width : 220px)
+{
+  body {
+    font: 20px Arial;
+  }
+  button {
+    font: 15px Arial;
+  }
+}
+@media screen and (max-width : 1204px)
+{
+  body {
+    font: 30px Arial;
+  }
+  button {
+    font: 20px Arial;
+  }
+}
