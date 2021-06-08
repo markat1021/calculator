@@ -20,6 +20,11 @@ main {
   margin-right:auto;
 }
 
+#disclaimer {
+  font-size: 0.4em;
+  text-align: center;
+}
+
 #calculator {
   display: grid;
   height: 100%;
