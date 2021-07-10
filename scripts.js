@@ -35,7 +35,7 @@ function inputFired(e) {
   if(e.target.id=="add") { advance("+") };
   if(e.target.id=="subtract") { advance("–") };
   if(e.target.id=="multiply") { advance("x") };
-  if(e.target.id=="divide") { advance("÷") };
+  if(e.target.id=="divide") { advance("\÷") };
 
   if(e.target.id=="AC") { allClear() };
   if(e.target.id=="C") { clear() };
